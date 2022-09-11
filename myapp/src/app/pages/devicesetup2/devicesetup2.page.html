@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Device setup </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="flex-center">
+<ion-card>
+  <ion-card-header >
+    <ion-card-title>Location service in the background</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <h2>The app collects location data to automatically record your trips without any effort from your side,even when the app is closed or not in use.<br>Please choose “always allow” in the next step, otherwise the app will not work.</h2>
+     <ion-button size="full" color="success" (click)="setup()">Continue</ion-button>
+  </ion-card-content>
+</ion-card>
+</div>
+</ion-content>

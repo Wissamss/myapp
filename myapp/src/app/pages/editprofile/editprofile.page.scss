@@ -1,0 +1,21 @@
+ion-card{
+    font-weight: bold;
+    p{
+        padding:10px;
+    }
+    ion-label{
+        p{
+            padding:0px;
+            font-size:18px;
+        }
+    }
+}
+ion-button[color="success"]{
+    text-transform:uppercase;
+    margin:15px;
+    font-weight: bold;
+}
+ion-avatar{
+    width:75px;
+    height:75px;
+}

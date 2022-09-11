@@ -1,0 +1,17 @@
+<!-- trip report page-->
+<ion-header>
+  <app-header title="Trip Report"></app-header>
+</ion-header>
+<ion-content scrollX="true">
+<ion-toolbar color="success"><ion-label>Tap details for more info</ion-label></ion-toolbar>
+<ion-grid>
+    <ion-row >
+    <div class="col"  *ngFor="let header of headerRow"><ion-col class="row">{{header}}</ion-col></div>
+    </ion-row>
+    <ion-row *ngFor="let row of csvData; let i = index">
+    <div class="col" *ngFor="let data of row; let j = index"><ion-col>{{csvData[i][j]}}</ion-col></div>
+    <div class="col"><ion-col><ion-button fill="clear" size="small" (click)="details()">Details</ion-button></ion-col></div>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<app-footer></app-footer>

@@ -1,0 +1,22 @@
+<!-- Q&A page using CSV file-->
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button title=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Trips report</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content scrollX="true">
+<ion-toolbar color="success" ><ion-label><h1>Referring to the result of your last trip, please answer the following questions:</h1></ion-label></ion-toolbar>
+<h4 >Write down the number of the choosen option at "Answer here" field ! </h4>
+<div *ngFor="let row of csvData; let i = index">
+  <div *ngFor="let data of row; let j = index; trackBy: trackByFn" >
+    <ion-input type="text"  [(ngModel)]="csvData[i][j]"></ion-input>
+  </div>
+</div>
+<ion-button color="success" (click)="exportCSV()">
+    Send
+  </ion-button>
+</ion-content>
+<app-footer></app-footer>

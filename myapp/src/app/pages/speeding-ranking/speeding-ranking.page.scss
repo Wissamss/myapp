@@ -1,0 +1,43 @@
+ion-list [color='success']{
+    padding:0;
+    box-shadow: 0 1px 2px 1px rgb(0 0 0 / 20%);
+
+}
+h3{
+        font-weight: bold;
+        color:#2dd36f;
+        font-size:20px;
+        
+}
+
+ion-avatar{
+    width:75px;
+    height:75px;
+}
+
+ion-grid{
+        
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top:10px;
+    
+   
+   .col {
+       border: solid 1.5px rgb(100, 98, 98);
+       border-bottom-style:solid;
+       border-right-style:solid;
+       font-size: 18px;
+       font-weight: bold;
+       padding-bottom: 0px;
+       padding-top: 5px;
+       padding-left: 2px;
+       padding-right: 2px;
+       width:110px;
+       color:black;
+   }
+   .row{
+       color:#2dd36fbd;
+       font-size:20px ;
+   }
+   
+   }

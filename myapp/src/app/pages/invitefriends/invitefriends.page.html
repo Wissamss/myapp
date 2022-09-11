@@ -1,0 +1,19 @@
+<!-- Invite friends-->
+<ion-header>
+  <app-header title="Invite friends"></app-header>
+</ion-header>
+
+<ion-content>
+<app-tool-bar ></app-tool-bar>
+<ion-toolbar color="success">
+   <h2>Invite your friends and help make them better,smarter and safer drivers.<br>Ask them to install the app.</h2>
+</ion-toolbar>
+<ion-item>
+      <ion-input type="email" [(ngModel)]="to" placeholder="To:x@example.com"></ion-input>
+</ion-item>
+<ion-list>
+    <h2><p align="center">Simply enter an email address above in order to invite a friend to use the app.</p></h2>
+<ion-button color="success" (click)="send()">Send invitation!</ion-button>
+</ion-list>
+</ion-content>
+<app-footer></app-footer>

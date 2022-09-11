@@ -1,0 +1,28 @@
+<!-- dash board-->
+<ion-header>
+<app-header title="Dashboard"></app-header>
+</ion-header>
+<ion-content>
+<app-tool-bar ></app-tool-bar>
+<ion-item>
+<ion-list class="right">
+<div  id="rectangle"><h1>0</h1></div>
+<h6>Scored<br>Km</h6>
+</ion-list>
+<ion-list class="left">
+  <div  id="rectangle"><h1>0</h1></div>
+  <h6>Scored<br>Trips</h6>
+</ion-list>
+</ion-item>
+<div class="progress">
+  <h3>Start driving to see your score</h3>
+<app-progress-bar [progressValue]="loadProgress"></app-progress-bar>
+</div>
+<div class="toolbar">
+<ion-toolbar color="success"><h2><span>Latest trip</span><br>No scored trips yet. Start driving!</h2></ion-toolbar>
+</div>
+<img src="https://img.freepik.com/premium-vector/city-map-town-streets-with-park-river-downtown-gps-navigation-plan-abstract-transportation-urban_163786-697.jpg?w=1060" />
+
+</ion-content>
+<app-footer></app-footer>
+

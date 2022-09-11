@@ -1,0 +1,27 @@
+<!-- settings page-->
+<ion-header>
+  <app-header title="Settings"></app-header>
+</ion-header>
+
+<ion-content>
+<app-tool-bar></app-tool-bar>
+<ion-button  fill="clear"  (click)="setup()">Device setup</ion-button>
+<div class="select">
+<ion-item>
+  <ion-label>Select: Language</ion-label>
+  <ion-select >
+    <ion-select-option >Arabe</ion-select-option>
+    <ion-select-option >Frensh</ion-select-option>
+    <ion-select-option >English</ion-select-option>
+  </ion-select>
+</ion-item>
+<ion-item>
+  <ion-label>Select: Unit</ion-label>
+  <ion-select >
+    <ion-select-option >Km</ion-select-option>
+    <ion-select-option >Mile</ion-select-option>
+  </ion-select>
+</ion-item>
+</div>
+</ion-content>
+<app-footer></app-footer>

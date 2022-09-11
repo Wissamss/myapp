@@ -1,0 +1,34 @@
+<!-- Leader board page-->
+<ion-header>
+  <app-header title="leader Board"></app-header>
+</ion-header>
+
+<ion-content>
+<app-tool-bar></app-tool-bar>
+<ion-item>
+  <ion-button  strong="true" fill="clear" (click)="overall(
+)">Overall</ion-button>
+  <ion-button fill="clear">Week</ion-button>
+  <ion-button fill="clear">Month</ion-button>
+</ion-item>
+<ion-list>
+<div class="progress">
+  <h3>You</h3>
+<app-progress-bar [progressValue]="loadProgress"></app-progress-bar>
+</div>
+<div class="progress">
+  <h3>Average drivers</h3>
+<app-progress-bar [progressValue]="loadProgress1"></app-progress-bar>
+</div>
+<div class="progress">
+  <ion-button fill="clear" size="full" (click)="rank()">
+  <h3>Top drivers</h3>
+  </ion-button>
+<app-progress-bar [progressValue]="loadProgress2"></app-progress-bar>
+</div>
+</ion-list>
+<div class="toolbar">
+  <ion-toolbar ><h2><span>Badges</span></h2></ion-toolbar>
+  </div>
+</ion-content>
+<app-footer></app-footer>

@@ -1,0 +1,395 @@
+<!-- update profile-->
+<ion-header >
+  <ion-toolbar color="success" >
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>myApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content   *ngIf="user">
+    <ion-card >
+      <ion-list color="success">
+        <ion-item color="success">
+          <ion-avatar slot="start">
+          <img  src="https://static.vecteezy.com/system/resources/previews/002/002/403/non_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"/>
+          </ion-avatar>
+          <ion-label>
+            <h1>{{user.fullname}}</h1>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+      </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title color="success">Personal Informations </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-label>Full Name</ion-label>
+              <ion-input type="text"  placeholder={{user.fullname}} ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label >Email</ion-label>
+              <ion-input type="email"  placeholder={{user.email}} ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label >Password</ion-label>
+              <ion-input type="password"  placeholder={{user.password}}></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label >Phone number</ion-label>
+              <ion-input type="tel"  placeholder={{user.phonenumber}}></ion-input>
+            </ion-item>
+        </ion-card-content>
+      </ion-card>
+ <form  [formGroup]="editprofileform" (ngSubmit)="edit()">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title color="success">Gender</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-radio-group formControlName="gender">
+            <ion-label>
+              choose one
+            </ion-label>
+          <ion-item>
+            <ion-label>Male</ion-label>
+            <ion-radio value="male" ></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Female</ion-label>
+            <ion-radio value="female" ></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+        <ion-item>
+          <ion-label position="floating">Age</ion-label>
+          <ion-input type="number"formControlName="age"></ion-input>
+        </ion-item>
+      <ion-item>
+        <ion-label position="floating">Adresse</ion-label>
+        <ion-input type="text" formControlName="adresse"></ion-input>
+      </ion-item>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title color="success">Education degree</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-radio-group formControlName="educationdegree">
+                <ion-label>
+                  choose one 
+                </ion-label>
+              <ion-item>
+                <ion-label>Illiterate</ion-label>
+                <ion-radio value="Illiterate"  ></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label>Primary</ion-label>
+                <ion-radio value="Primary" ></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label>Secondary</ion-label>
+                <ion-radio value="Secondary"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label>University</ion-label>
+                <ion-radio value="University" ></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title color="success">Occupation</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+              <ion-radio-group formControlName="occupation">
+                  <ion-label>
+                    choose one
+                  </ion-label>
+                <ion-item>
+                  <ion-label>Not working</ion-label>
+                  <ion-radio value="Not working" ></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Professional</ion-label>
+                  <ion-radio value="Professional"  ></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Business Man</ion-label>
+                  <ion-radio value="Business Man" ></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>House wife</ion-label>
+                  <ion-radio value="House wife"></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Student</ion-label>
+                  <ion-radio value="Student" ></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Retired</ion-label>
+                  <ion-radio value="Retired" ></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title color="success">Marital status</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-radio-group formControlName="maritalstatus">
+                    <ion-label>
+                      choose one
+                    </ion-label>
+                  <ion-item>
+                    <ion-label>Single</ion-label>
+                    <ion-radio value="Single" ></ion-radio>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Married</ion-label>
+                    <ion-radio value="Married" ></ion-radio>
+                  </ion-item>
+                </ion-radio-group>
+              </ion-card-content>
+            </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title color="success">
+          Residence zone
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-radio-group formControlName="residencezone">
+            <ion-label>choose one</ion-label>
+            <ion-item>
+              <ion-label>Urban</ion-label>
+              <ion-radio value="Urban" ></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Rural</ion-label>
+              <ion-radio value="Rural" ></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title color="success">
+          Vehicle Capacity
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-radio-group formControlName="vehiclecapacity">
+            <ion-label>choose one</ion-label>
+            <ion-item>
+              <ion-label>2-4</ion-label>
+              <ion-radio value="2-4" ></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>4-6</ion-label>
+              <ion-radio value="4-6" ></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>6-8</ion-label>
+              <ion-radio value="6-8" ></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>More than 8</ion-label>
+              <ion-radio value="+8" ></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title color="success">Driving Experience(year)</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-radio-group formControlName="drivingexperience">
+                <ion-label>
+                  choose one
+                </ion-label>
+              <ion-item>
+                <ion-label>Below 2 </ion-label>
+                <ion-radio value="-2"  ></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label>2-5</ion-label>
+                <ion-radio value="2-5" ></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label>5-10</ion-label>
+                <ion-radio value="5-10" ></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label>More than 10 </ion-label>
+                <ion-radio value="+10"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-card-content>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title color="success">Average annual mileage(km)</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+              <ion-radio-group formControlName="averageannualmileage">
+                  <ion-label>
+                    choose one
+                  </ion-label>
+                <ion-item>
+                  <ion-label>0-5000</ion-label>
+                  <ion-radio value="0-5000" ></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>5000-15000</ion-label>
+                  <ion-radio value="5000-15000" ></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>15000-25000</ion-label>
+                  <ion-radio value="15000-25000"></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>25000-50000</ion-label>
+                  <ion-radio value="25000-50000"></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>More</ion-label>
+                  <ion-radio value="More" ></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title color="success">
+              Frequency of motorway use
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-radio-group formControlName="frequencyofmotorwayuse">
+                <ion-label>choose one</ion-label>
+                <ion-item>
+                  <ion-label>Never</ion-label>
+                  <ion-radio value="Never" ></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Occasionally</ion-label>
+                  <ion-radio value="Occasionally"  ></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Daily</ion-label>
+                  <ion-radio value="Daily" ></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title color="success">
+              Car type
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-radio-group formControlName="cartype">
+                <ion-item>
+                  <ion-label>Small car</ion-label>
+                  <ion-radio value="smallcar" ></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>4WD</ion-label>
+                  <ion-radio  value="4WD" ></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title color="success">
+              Driving Frequency
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-radio-group formControlName="drivingfrequency">
+                <ion-label>choose one</ion-label>
+                <ion-item>
+                  <ion-label>Daily</ion-label>
+                  <ion-radio  value="daily"  ></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Weekend</ion-label>
+                  <ion-radio  value="Weekend" ></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>Holidays</ion-label>
+                  <ion-radio  value="Holidays" ></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title color="success">
+              Commuted reguraly
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-radio-group formControlName="commutedreguraly">
+                <ion-item>
+                  <ion-label>Yes</ion-label>
+                  <ion-radio value="Yes" ></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>No</ion-label>
+                  <ion-radio value="No" ></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title color="success">
+              Professional drivers
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-radio-group formControlName="professionaldrivers">
+                <ion-item>
+                  <ion-label>Yes</ion-label>
+                  <ion-radio  value="Yes"></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>No</ion-label>
+                  <ion-radio  value="No"></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title color="success">
+              Suffer from an illness
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-radio-group formControlName="illness">
+                <ion-item>
+                  <ion-label>Yes</ion-label>
+                  <ion-radio  value="Yes"></ion-radio>
+                </ion-item>
+                <ion-item>
+                  <ion-label>No</ion-label>
+                  <ion-radio  value="No"></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-card-content>
+          </ion-card>
+          <ion-list>
+            <ion-button color="success" size="full" type="submit">Edit</ion-button>
+          </ion-list>
+    </form>
+</ion-content>

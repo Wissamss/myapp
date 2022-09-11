@@ -1,0 +1,12 @@
+<!-- driving tips page using CSV file-->
+<ion-header>
+  <app-header title="Driving Tips"></app-header>
+</ion-header>
+<ion-content >
+<app-tool-bar></app-tool-bar>
+<div class="tip">
+<h2>Tip of Today</h2>
+<div *ngFor="let row of csvData;let j=index">{{csvData[i][j]}}</div>
+</div>
+</ion-content>
+<app-footer></app-footer>

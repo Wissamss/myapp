@@ -1,0 +1,25 @@
+ion-list {
+    box-shadow: 0 1px 2px 1px rgb(0 0 0 / 20%);
+    .money{
+      font-weight: bold;  
+    }
+}
+.list{
+  padding-bottom:10%;
+}
+h3{
+  font-weight: bold;
+  color:#2dd36f;
+  font-size: 22px;
+}
+ion-avatar{
+  width:75px;
+  height:75px;
+
+}
+ion-button[shape=circle] {
+  --border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  
+}

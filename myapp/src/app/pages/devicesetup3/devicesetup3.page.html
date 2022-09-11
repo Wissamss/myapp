@@ -1,0 +1,29 @@
+<!-- device setup page /permisson to alow GPS -->
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button title=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Device setup </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2>All the following settings must be configured,otherwise <br><span>YOUR TRIPS WONT BE RECORDED</span></h2>
+  <ion-item>
+    <ion-label>Location (GPS)<br><p>Must be ON(High Accuracy if<br>applicable)to automatically detect<br>your trips</p></ion-label>
+    <ion-button fill="clear" (click)="setup()">
+      <ion-icon slot="end" name="chevron-forward-outline" color="success"></ion-icon>
+    </ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-label>Location permission<br><p>Must be granted to detect your trips</p></ion-label>
+    <ion-toggle color="success"></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-label>Physical activity permission<br><p>Must be granted to detect your trips</p></ion-label>
+    <ion-toggle color="success"></ion-toggle>
+  </ion-item>
+  
+
+</ion-content>

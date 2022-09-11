@@ -1,0 +1,46 @@
+<!-- Register Page-->
+<ion-header >
+  <ion-toolbar color="success" >
+    <ion-buttons slot="start">
+      <ion-back-button title=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content> 
+<ion-card>
+<form [formGroup]="registerForm.getForm()" >
+  <ion-card-content>
+  <ion-item>
+    <ion-label position="floating">Full Name</ion-label>
+    <ion-input type="text" formControlName="fullname"></ion-input>
+  </ion-item>
+  <app-error-message [field]="registerForm.getForm().get('fullname')" error="required" message="Fullname is mandatory"></app-error-message>
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input type="email" formControlName="email"></ion-input>
+  </ion-item>
+  <app-error-message [field]="registerForm.getForm().get('email')" error="required" message="Email is mandatory"></app-error-message>
+  <app-error-message [field]="registerForm.getForm().get('email')" error="email" message="Email is invalid"></app-error-message>
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="password" formControlName="password"></ion-input>
+  </ion-item>
+  <app-error-message [field]="registerForm.getForm().get('password')" error="required" message="Password is mandatory"></app-error-message>
+  <app-error-message [field]="registerForm.getForm().get('password')" error="minLength(8)" message="Minumum is 8 characters"></app-error-message>
+  <ion-item>
+    <ion-label position="floating">Confirm Password</ion-label>
+    <ion-input type="password" formControlName="confirmpassword"></ion-input>
+  </ion-item>
+  <app-error-message [field]="registerForm.getForm().get('confirmpassword')" error="isntMatching" message="Not matching password"></app-error-message>
+  <ion-item>
+    <ion-label position="floating">Phone number</ion-label>
+    <ion-input type="number" formControlName="phonenumber"></ion-input>
+  </ion-item>
+  <app-error-message [field]="registerForm.getForm().get('phonenumber')" error="required" message="Phonenumber is mandatory"></app-error-message>
+  <ion-button color="success" size="full" (click)="register()">Register</ion-button>
+</ion-card-content>
+</form>
+</ion-card>
+</ion-content>
+

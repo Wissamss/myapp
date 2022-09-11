@@ -1,0 +1,32 @@
+<!-- score card page-->
+<ion-header>
+  <app-header title="Score card"></app-header>
+</ion-header>
+
+<ion-content>
+<app-tool-bar></app-tool-bar>
+<ion-item>
+  <ion-button  strong="true" fill="clear" >Overall</ion-button>
+  <ion-button fill="clear">Day</ion-button>
+  <ion-button fill="clear">Week</ion-button>
+  <ion-button fill="clear">Month</ion-button>
+</ion-item>
+<ion-item>
+  <ion-list class="right">
+  <div  id="rectangle"><h1>0</h1></div>
+  <h6>Scored<br>Km</h6>
+  </ion-list>
+  <ion-list class="left">
+    <div  id="rectangle"><h1>0</h1></div>
+    <h6>Scored<br>Trips</h6>
+  </ion-list>
+  </ion-item>
+  <div class="progress">
+    <h3>Overall Score</h3>
+  <app-progress-bar [progressValue]="loadProgress"></app-progress-bar>
+  </div>
+  <div class="toolbar">
+    <ion-toolbar ><h2><span>Badges</span></h2></ion-toolbar>
+    </div>
+  </ion-content>
+<app-footer></app-footer>

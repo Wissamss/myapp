@@ -1,0 +1,35 @@
+<!-- trip details page-->
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button title=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Trip report</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-toolbar color="success"><ion-label>Tap icons for more info</ion-label>
+<ion-icon id='icon' name="chevron-down" color="warning"></ion-icon>
+</ion-toolbar>
+<img src="https://img.freepik.com/premium-vector/city-map-town-streets-with-park-river-downtown-gps-navigation-plan-abstract-transportation-urban_163786-697.jpg?w=1060" />
+
+<ion-grid >
+  <ion-row >
+    <div class="col" ><ion-col class="row"><span>Overall trip score</span></ion-col></div>
+    <div class="col"><ion-col>{{overallscore}} stars</ion-col></div>
+    <div class="col"><ion-col><ion-button fill='clear' size="small" (click)="details()">Details</ion-button></ion-col></div>
+    </ion-row>
+  <ion-row >
+  <div class="col" ><ion-col class="row">Speeding</ion-col></div>
+  <div class="col"><ion-col >{{speedscore}} stars</ion-col></div>
+  <div class="col"><ion-col><ion-button fill='clear' size="small" (click)="details()">Details</ion-button></ion-col></div>
+  </ion-row>
+  <ion-row>
+  <div class="col"><ion-col class="row">Distracted</ion-col></div>
+  <div class="col"><ion-col>{{distractedscore}} stars</ion-col></div>
+  <div class="col"><ion-col><ion-button fill='clear' size="small" (click)="details()">Details</ion-button></ion-col></div>
+  </ion-row>
+</ion-grid>
+
+</ion-content>
+<app-footer></app-footer>

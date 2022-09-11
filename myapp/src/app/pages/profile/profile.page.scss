@@ -1,0 +1,17 @@
+ion-title{
+    font-weight: bold;
+    font-size: 23px;
+}
+ion-content{
+    --background: #2dd36f;
+}
+ion-button{
+    margin:10px;
+    text-transform:uppercase;
+    border-radius:round($number: 20);
+}
+ion-card{
+    ion-radio-group{
+        padding: 5px;
+    }
+}

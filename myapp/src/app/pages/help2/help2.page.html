@@ -1,0 +1,22 @@
+<ion-header>
+  <app-header title="Invite friends"></app-header>
+</ion-header>
+
+<ion-content>
+<app-tool-bar ></app-tool-bar>
+<div class="flex">
+<ion-card>
+<ion-header><ion-card-title><h2>Write Your email to us</h2></ion-card-title></ion-header>
+<ion-card-content>
+<ion-item>
+      <ion-input type="text" [(ngModel)]="subject" placeholder="Subject"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-input type="text" [(ngModel)]="body" placeholder="Write your email "></ion-input>
+</ion-item>
+<ion-button color="success" (click)="send()">Send</ion-button>
+</ion-card-content>
+</ion-card>
+</div>
+</ion-content>
+<app-footer></app-footer>
